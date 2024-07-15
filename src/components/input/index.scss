@@ -1,0 +1,60 @@
+.base-input {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  .label {
+    color: var(--dark);
+  }
+
+  .input-container {
+    position: relative;
+
+    .input {
+      padding: 7px 14px;
+      width: 100%;
+      border-radius: 5px;
+      // border: 1px solid var(--border);
+      border: 1px solid rgba(188, 198, 204, 0.15);
+      font-size: 12px;
+      line-height: 24px;
+      font-weight: 400;
+      background: rgba(188, 198, 204, 0.1);
+      font-family: 'Inter', sans-serif;
+
+      &:hover {
+        // background: var(--secondary);
+      }
+
+      &:focus{
+        border: none;
+        outline: 0;
+      }
+
+      &::placeholder {
+        // color: var(--text);
+        font-family: 'Inter', sans-serif;
+      }
+    }
+
+    .error-input{
+      border: 1px solid rgb(234, 26, 26);
+    }
+
+    .textarea {
+      height: 260px;
+    }
+
+    .input-icons {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-8px);
+      pointer-events: none;
+    }
+  }
+
+  .error-message{
+    color: rgb(234, 26, 26);
+  }
+}
